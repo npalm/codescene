@@ -1,0 +1,58 @@
+# Code As A Crime Scene: Fix Technical Debt with Behavioural Code Analysis (Philips, Boston 2018)
+
+NOTE: the workshop will mix theory with hands-on practical exercises. If you want to take this opportunity to analyse your own codebase, then you need to follow the preparation instructions below.
+You can of course participate in the workshop _without_ doing the preparations. In that case, we'll use prepared analyses of various codebases shared via codescene.io (more instructions follow during the workshop).
+
+## Environment
+
+You need to bring your own laptop for the practical exercises. If you run a virtual machine, make sure you allocate at least 4 Gb RAM.
+
+You need to have the following programs installed:
+
+* A modern web browser (Chrome, Firefox, etc).
+* A 64 bits Java JDK, version 8. You can test that you got the correct version by typing "java -version" at your command prompt.
+* A Git command line client, at least version 2.15. You can download a Git client here: https://git-scm.com/downloads
+* Ensure that your Git client is available on your PATH. That is, from a command line terminal (DOS, shell, etc) you should be able to type "git --version" and get something like "git version 2.15" back.
+
+NOTE: it's important that you use Java 8 - the tools won't work with older versions.
+
+NOTE2: if you cannot install these tools you can still participate in the workshop by pairing with another participant or by using the pre-generated analysis results from codescene.io (instructions follow at the workshop in that case).
+
+## Preparations
+
+Download CodeScene from the following link: 
+https://downloads.codescene.io/enterprise/2.5.0/codescene-enterprise-edition.standalone.jar
+
+This version of CodeScene is packaged as a standalone JAR. That means you start it from a command prompt. So please open a shell (or DOS window), go to the folder where you've saved the file `codescene-enterprise-edition.standalone.jar` and type the following:
+
+   java -jar codescene-enterprise-edition.standalone.jar
+
+This will launch a web server and you should see something like the following output in your terminal:
+
+   adam$ java -jar codescene-enterprise-edition.standalone.jar
+   Applying 0001-initial
+   Applying 0002-external-applications
+   Applying 0003-configure-anonymize-results
+   ...
+   2017-10-23 14:40:38 MacBook-Pro-3.local INFO [cacsremoteservice.features.diagnostics.diagnostics-feature:84] - Starting Codescene with environment:  ...
+2017-10-23 14:40:39 MacBook-Pro-3.local INFO [cacsremoteservice.features.diagnostics.diagnostics-feature:86] - Starting up with Git at:  git  version:  2.15
+
+That's it! Now, open your browser and point it to http://localhost:3003/
+
+If everything is correctly installed, you see a page that prompts for a product key. That's great - you're prepared for the workshop!
+
+### Clone Git Repositories for the Case Studies
+
+I recommend that you take this opportunity to analyze your own code, or some open source that you use often. Just make sure you have a local clone of your Git repository on your laptop.
+
+We'll also analyze a number of well-known open source projects to find real problems. Please prepare by cloning the following Git repositories to a folder on your laptop:
+
+* git clone https://github.com/aspnet/Mvc
+* git clone git@github.com:nopSolutions/nopCommerce.git
+* git clone git@github.com:erlang/otp.git
+* Optional: Clone all the repositories in Spinnaker, described and linked here: https://www.spinnaker.io/reference/architecture/
+  We use Spinnaker as an example on analyses in a multi-repository, microservice like project.
+
+### Support
+
+Please contact Adam if you need any help or support with the preparations: adam.tornhill@empear.com
